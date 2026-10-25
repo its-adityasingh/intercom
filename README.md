@@ -1,6 +1,6 @@
 <div align="center">
 
-# Intercom
+# INTERCOM | इंटरकॉम
 
 ### Be understood, even in the noise.
 
