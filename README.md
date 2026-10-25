@@ -47,7 +47,7 @@ Shouting and repeating instructions is slow, and lip-reading is unreliable. Numb
   <img src="docs/screenshot-problem.png" alt="Problem we are solving page" width="850">
 </p>
 
-## What Intercom does
+## What Intercom Does
 
 Intercom gives people a **reliable written channel** on top of voice. Two or more people join the same room from separate devices:
 
