@@ -19,25 +19,7 @@ Speech → Text → Speech Communication for Factories, Construction Sites, Ware
 
 ---
 
-## Table of contents
-
-- [The problem](#the-problem)
-- [What Intercom does](#what-intercom-does)
-- [Screenshots](#screenshots)
-- [How it works](#how-it-works)
-- [Features](#features)
-- [Tech stack](#tech-stack)
-- [Getting started](#getting-started)
-- [Configuration](#configuration)
-- [Project structure](#project-structure)
-- [API reference](#api-reference)
-- [Privacy and limits](#privacy-and-limits)
-- [Known limitations](#known-limitations)
-- [Author](#author)
-
----
-
-## The problem
+## The Problem
 
 People working in factories, construction sites, warehouses and other loud places often cannot understand each other on a normal voice call.
 
