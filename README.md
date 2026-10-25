@@ -204,6 +204,10 @@ clearsignal/
 - State is in memory, so it is lost on restart
 - Script spellings in the dot wordmark should be reviewed by native speakers (edit `WORDS` in `public/wordmark.js`)
 
+## Visit
+
+for Demo **[INTERCOM]([https://x.com/dontstoptom](https://intercom-4wwd.onrender.com/))**
+
 ## Author
 
 Built by **[@dontstoptom](https://x.com/dontstoptom)** for the Gnani GenAI Hackathon.
