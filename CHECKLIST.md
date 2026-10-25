@@ -1,0 +1,2 @@
+- [x] Verify Gnani STT/TTS docs  - [x] Adapter + tests  - [x] Rooms + sockets + tests  - [x] UI + recorder + wordmark
+- [ ] First live Gnani STT/TTS call (needs your machine)  - [ ] Two-device browser test  - [ ] Native review of script spellings

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>INTERCOM | इंटरकॉम</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500&family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Devanagari:wght@700&family=Noto+Sans+Telugu:wght@700&family=Noto+Sans+Tamil:wght@700&family=Noto+Sans+Kannada:wght@700&family=Noto+Sans+Malayalam:wght@700&family=Noto+Sans+Bengali:wght@700&family=Noto+Sans+Gujarati:wght@700&family=Noto+Sans+Gurmukhi:wght@700&family=Noto+Sans+Oriya:wght@700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="bar" id="topbar">
+  <span></span>
+  <nav aria-label="Main"><a href="#/">Home</a><a href="#/how">How it works</a><a href="#/join">Join a room</a><a href="#/problem">Problem we are Solving</a>
+  <span></span>
+</header>
+
+<main id="view"></main>
+
+<footer class="sitefoot"><hr><a href="https://x.com/dontstoptom" target="_blank" rel="noopener">@dontstoptom</a></footer>
+
+<template id="t-landing">
+  <section class="hero">
+    <div class="wordmark-wrap">
+      <canvas id="wordmark" aria-hidden="true"></canvas>
+      <p class="sr-only" id="wordmark-text" aria-live="polite">INTERCOM</p>
+    </div>
+    <h1>Be understood Even in the Noise</h1>
+    <p class="lede">Turns each person's Communicate through Machinery, Crowds and Construction Noise Seamlessly</p>
+    <div class="actions"><a class="btn grad" href="#/start">Start Communicating</a><a class="btn" href="#/join">Join a room</a></div>
+  </section>
+</template>
+
+<template id="t-start">
+  <section class="narrow pad">
+    <h1 class="h1s">Create a Room</h1>
+    <form id="create-form" class="stack" autocomplete="off">
+      <label>Your Name<input name="name" required maxlength="30" autocomplete="name"></label>
+      <label>You will Speak in<select name="language" id="lang-create"></select></label>
+      <label class="check"><input type="checkbox" name="spoken" checked> Generate Spoken playback for messages</label>
+      <button class="btn primary" type="submit">Create Room</button>
+      <p class="err" role="alert" id="create-err"></p>
+    </form>
+    <p class="sub">Already have a Code? <a href="#/join">Join a Room</a></p>
+  </section>
+</template>
+
+<template id="t-join">
+  <section class="narrow pad">
+    <h1 class="h1s">Join a Room</h1>
+    <form id="join-form" class="stack" autocomplete="off">
+      <label>Room Code<input name="code" required maxlength="12" class="mono" style="text-transform:uppercase"></label>
+      <label>Your Name<input name="name" required maxlength="30"></label>
+      <label>You will Speak in<select name="language" id="lang-join"></select></label>
+      <button class="btn primary" type="submit">Join Room</button>
+      <p class="err" role="alert" id="join-err"></p>
+    </form>
+  </section>
+</template>
+
+<template id="t-how">
+  <section class="narrow pad how">
+    <h1 class="h1s">How it Works</h1>
+    <h3>Readable Transcripts</h3>
+    <p>Every message is shown as text first, so a number or machine ID can be read instead of guessed.</p>
+    <h3>Spoken Playback</h3>
+    <p>The other person can also play the message as synthesized speech. It never plays by itself unless they turn that on.</p>
+    <h3>Two-Way</h3>
+    <p>Two people join one room by code or link and reply the same way, from separate devices.</p>
+    <h3>Where Gnani is used</h3>
+    <p>Your recording goes to this app's server, which sends it to Gnani Prisma for speech-to-text. The transcript goes to the other person. If spoken playback is on, the server sends the text to Gnani Timbre for text-to-speech. The API key stays on the server.</p>
+    <p>Transcription can be wrong. Confirm important instructions, and do not rely on this app for safety-critical control.</p>
+    <h3>Privacy &amp; limits</h3>
+    <p>Recordings are sent to Gnani for processing and are not stored by this app. Generated speech is held in server memory for 30 minutes. Rooms and messages are held in memory and removed after two idle hours or when the server restarts. The microphone is only on while you are recording. Browser noise suppression is best effort, and this is not a certified safety system.</p>
+        <h3>Gallery</h3>
+    <p>Illustrations of the situations Intercom is built for.</p>
+    <div class="gal">
+      <figure><img src="gallery/noisy-site.svg" alt="A crowd of workers beside loud machinery, with one person speaking and the sound lost in the noise"><figcaption>On a loud site, a spoken instruction is lost before it reaches the crowd.</figcaption></figure>
+      <figure><img src="gallery/speech-to-text.svg" alt="One worker's speech turns into a written message that another worker can read and confirm"><figcaption>Speech becomes a written message the other person can read and confirm.</figcaption></figure>
+      <figure><img src="gallery/everyone-reads.svg" alt="Rows of people each holding a phone showing the same message"><figcaption>Everyone gets the same words, instead of guessing at shouted ones.</figcaption></figure>
+    </div>
+  </section>
+</template>
+
+<template id="t-problem">
+  <section class="pad problem">
+    <h1 class="h1s">Problem we are Solving</h1>
+    <div class="problem-grid">
+      <figure class="pimg">
+        <img src="problem-crowd.png" alt="A woman stands still looking at her phone on a busy crosswalk while a blurred crowd rushes past her">
+        <figcaption>In a crowd, everyone is moving and talking at once. Being heard is the hard part.</figcaption>
+      </figure>
+      <div class="ptext how">
+        <p>People working in factories, construction sites, warehouses, and other loud places often cannot understand each other on a normal voice call.</p>
+        <p>Shouting and repeating instructions is slow, and lip-reading is unreliable. Numbers, machine identifiers, locations, and instructions are the easiest things to mishear, and the costliest.</p>
+        <h3>What Intercom does about it</h3>
+        <p>It gives both people a reliable written channel. What one person says becomes text on the other person's screen, with optional spoken playback, so important details can be read and confirmed.</p>
+        <p><a class="btn primary" href="#/start">Start Communicating</a></p>
+      </div>
+    </div>
+  </section>
+</template>
+
+<template id="t-gallery">
+  <section class="pad gallery">
+    <h1 class="h1s">Gallery</h1>
+    <p class="sub">Illustrations of the situations Intercom is built for. Drop your own photos into <span class="mono">public/gallery/</span> with the same file names to replace them.</p>
+    <div class="gal">
+      <figure><img src="gallery/noisy-site.svg" alt="A crowd of workers beside loud machinery, with one person speaking and the sound lost in the noise"><figcaption>On a loud site, a spoken instruction is lost before it reaches the crowd.</figcaption></figure>
+      <figure><img src="gallery/speech-to-text.svg" alt="One worker's speech turns into a written message that another worker can read and confirm"><figcaption>Speech becomes a written message the other person can read and confirm.</figcaption></figure>
+      <figure><img src="gallery/everyone-reads.svg" alt="Rows of people each holding a phone showing the same message"><figcaption>Everyone gets the same words, instead of guessing at shouted ones.</figcaption></figure>
+    </div>
+  </section>
+</template>
+
+<template id="t-diag">
+  <section class="narrow pad">
+    <h1 class="h1s">Diagnostics</h1>
+    <div id="diag" class="mono small">Loading…</div>
+    <p class="sub">Values come from real requests since the server started. Nothing here is simulated.</p>
+  </section>
+</template>
+
+<template id="t-room">
+  <div class="room">
+    <header class="roombar">
+      <div class="rb-left"><span class="mono code" id="room-code"></span><button class="link" id="copy-link">Copy invite link</button></div>
+      <div class="rb-mid" id="presence" aria-live="polite"></div>
+      <div class="rb-right"><span class="pill" id="conn">Connecting</span><button class="link" id="open-settings" aria-expanded="false">Settings</button><button class="link" id="leave">Leave</button></div>
+    </header>
+    <aside id="settings" hidden>
+      <label>You speak in<select id="s-lang"></select></label>
+      <label class="check"><input type="checkbox" id="s-auto"> Play incoming speech automatically</label>
+      <label>Volume<input type="range" id="s-vol" min="0" max="1" step="0.05" value="1"></label>
+      <label>Microphone<select id="s-mic"></select></label>
+      <label>Recording<select id="s-mode"><option value="hold">Hold to talk</option><option value="tap">Tap to start / stop</option></select></label>
+      <p class="small muted">Input language is what Gnani transcribes. This app does not translate.</p>
+      <div class="mono small" id="room-diag"></div>
+    </aside>
+    <ol class="convo" id="convo" aria-live="polite" aria-label="Conversation"></ol>
+    <p class="notice" id="notice" role="status"></p>
+    <footer class="composer">
+      <form id="text-form"><input id="text-in" maxlength="600" placeholder="Type a correction or follow-up" aria-label="Text message"><button class="btn" type="submit">Send</button></form>
+      <div class="recwrap">
+        <label class="voice-sel">Voice<select id="voice-sel" aria-label="Voice for your spoken messages"></select></label>
+        <span class="mono timer" id="timer" aria-live="off">0:00</span>
+        <canvas id="level" width="120" height="28" aria-hidden="true"></canvas>
+        <button class="rec" id="rec" aria-label="Record a message"><span id="rec-label">Hold to talk</span></button>
+        <button class="btn small-btn" id="cancel-rec" hidden>Cancel</button>
+      </div>
+    </footer>
+  </div>
+</template>
+<script type="module" src="app.js"></script>
+</body>
+</html>
