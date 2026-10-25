@@ -4,7 +4,7 @@
 
 ### BE UNDERSTOOD, EVEN IN THE NOISE
 
-Speech → text → speech communication for factories, construction sites, warehouses and crowds, powered by **Gnani Prisma** (speech-to-text) and **Gnani Timbre** (text-to-speech).
+Speech → Text → Speech Communication for Factories, Construction Sites, Warehouses and Crowds, powered by **Gnani Prisma** (speech-to-text) and **Gnani Timbre** (text-to-speech).
 
 ![Node](https://img.shields.io/badge/Node.js-20+-339933?logo=node.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.5-3178C6?logo=typescript&logoColor=white)
