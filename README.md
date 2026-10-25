@@ -2,7 +2,7 @@
 
 # INTERCOM | इंटरकॉम
 
-### Be understood, even in the noise.
+### BE UNDERSTOOD, EVEN IN THE NOISE
 
 Speech → text → speech communication for factories, construction sites, warehouses and crowds, powered by **Gnani Prisma** (speech-to-text) and **Gnani Timbre** (text-to-speech).
 
