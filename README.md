@@ -206,7 +206,7 @@ clearsignal/
 
 ## Visit
 
-for Demo **[INTERCOM]([https://x.com/dontstoptom](https://intercom-4wwd.onrender.com/))**
+for Demo **[INTERCOM](https://intercom-4wwd.onrender.com/)**
 
 ## Author
 
