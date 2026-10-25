@@ -90,14 +90,14 @@ Intercom gives people a **reliable written channel** on top of voice. Two or mor
 | Frontend | Vanilla JavaScript (ES modules), HTML, CSS |
 | Testing | Vitest |
 
-## Getting started
+## Getting Started
 
 ### Prerequisites
 
 - Node.js 20 or newer
 - A Gnani API key
 
-### Install and run
+### Install and Run
 
 ```bash
 git clone https://github.com/<your-username>/intercom.git
